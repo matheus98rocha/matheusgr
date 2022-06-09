@@ -33,8 +33,10 @@ public class TelaMenu extends javax.swing.JFrame {
         menuOption = new javax.swing.JMenu();
         cadMedico = new javax.swing.JMenuItem();
         cadPaciente = new javax.swing.JMenuItem();
+        consultarConsulta = new javax.swing.JMenuItem();
         sair = new javax.swing.JMenuItem();
         menuSobre = new javax.swing.JMenu();
+        jMenuItem1 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Hospital Albert Einstein");
@@ -62,6 +64,14 @@ public class TelaMenu extends javax.swing.JFrame {
         });
         menuOption.add(cadPaciente);
 
+        consultarConsulta.setText("Consulta");
+        consultarConsulta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                consultarConsultaActionPerformed(evt);
+            }
+        });
+        menuOption.add(consultarConsulta);
+
         sair.setText("Sair");
         sair.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -78,6 +88,15 @@ public class TelaMenu extends javax.swing.JFrame {
                 menuSobreActionPerformed(evt);
             }
         });
+
+        jMenuItem1.setText("Sobre");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
+        menuSobre.add(jMenuItem1);
+
         jMenuBar1.add(menuSobre);
 
         setJMenuBar(jMenuBar1);
@@ -113,13 +132,22 @@ public class TelaMenu extends javax.swing.JFrame {
     }//GEN-LAST:event_cadMedicoActionPerformed
 
     private void menuSobreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuSobreActionPerformed
-        JOptionPane.showMessageDialog(rootPane,"Sistema do hospital Albert Einstein...");
+
     }//GEN-LAST:event_menuSobreActionPerformed
 
     private void cadPacienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cadPacienteActionPerformed
      CadastroPaciente telaPaciente = new CadastroPaciente();
      telaPaciente.show();
     }//GEN-LAST:event_cadPacienteActionPerformed
+
+    private void consultarConsultaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_consultarConsultaActionPerformed
+     Consulta telaConsulta = new Consulta();
+     telaConsulta.show();
+    }//GEN-LAST:event_consultarConsultaActionPerformed
+
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+     JOptionPane.showMessageDialog(rootPane,"Dev Matheus Gonçalves Rocha");
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -159,8 +187,10 @@ public class TelaMenu extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuItem cadMedico;
     private javax.swing.JMenuItem cadPaciente;
+    private javax.swing.JMenuItem consultarConsulta;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenu menuOption;
     private javax.swing.JMenu menuSobre;
     private javax.swing.JMenuItem sair;

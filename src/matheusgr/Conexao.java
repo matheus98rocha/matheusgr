@@ -8,7 +8,7 @@ public class Conexao {
     String host = "localhost";
     String stringDeConexao = "jdbc:mysql://" + ":3306/" + banco + "?serverTimezone=UTC";
     String usuario = "root";
-    String senha = "311511cma";
+    String senha = "Senha123";
 
     public Connection conexao;
 

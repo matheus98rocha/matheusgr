@@ -8,6 +8,7 @@ package matheusgr;
  *
  * @author mathe
  */
+
 public class PacienteDAO extends Conexao{
     
     public String cadastrarPaciente(Paciente paciente)
@@ -27,4 +28,22 @@ public class PacienteDAO extends Conexao{
         }
     }
     
+/*   public ArrayList<Paciente> listarPacientes(Paciente paciente) {
+        try{
+        ArrayList<paciente> array = new ArrayList();
+        String sql = "SELECT * FROM paciente";
+        ArrayList result = this.getResultSet(sql);
+        
+        while(result.next()){
+            comboBox.addItem(result.medicoNome);
+        }
+        
+        return result;
+        }
+        catch(Exception e)
+        {
+            return e.getMessage();
+        }
+    };
+*/
 }
